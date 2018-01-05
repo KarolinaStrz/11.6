@@ -39,7 +39,9 @@ $(function() {
 		    // RETURN OF CREATED COLUMN
 		    return $column;
 		}
-		Column.prototype = {
+		
+	}
+	Column.prototype = {
 	    addCard: function(card) {
 	      this.$element.children('ul').append(card.$element);
 	    },
@@ -47,7 +49,6 @@ $(function() {
 	      this.$element.remove();
     	}
 		};
-	}
 	function Card(description) {
 	var self = this;
 
@@ -100,7 +101,7 @@ $(function() {
 	    	board.addColumn(column);
 	  });
 
-	});
+	
 	// CREATING COLUMNS
 	var todoColumn = new Column('To do');
 	var doingColumn = new Column('Doing');
@@ -118,3 +119,5 @@ $(function() {
 	// ADDING CARDS TO COLUMNS
 	todoColumn.addCard(card1);
 	doingColumn.addCard(card2);
+
+	});
